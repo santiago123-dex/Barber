@@ -1,0 +1,313 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const services = [
+  {
+    name: "Corte de Autor",
+    duration: "45 min",
+    price: "$55.000",
+    description: "Diseño de corte según facciones, rutina y estilo de vida. No se improvisa, se construye."
+  },
+  {
+    name: "Ritual de Barba",
+    duration: "35 min",
+    price: "$38.000",
+    description: "Vapor, perfilado, navaja y acabado con aceites. Precisión limpia para una presencia seria."
+  },
+  {
+    name: "Imagen Completa",
+    duration: "70 min",
+    price: "$82.000",
+    description: "Corte, barba y asesoría de styling para salir listo a una cita, reunión o sesión de fotos."
+  },
+  {
+    name: "Membresía Semanal",
+    duration: "4 visitas",
+    price: "$180.000",
+    description: "Pensada para clientes ejecutivos o creadores que necesitan verse impecables todo el mes."
+  }
+];
+
+const steps = [
+  "Diagnóstico rápido.",
+  "Corte o barba a tu medida.",
+  "Acabado limpio."
+];
+
+const stats = [
+  { value: "18 min", label: "promedio para reservar desde el móvil" },
+  { value: "+27%", label: "más ticket con packs y membresías" },
+  { value: "3 zonas", label: "de experiencia: corte, ritual y lounge" }
+];
+
+const gallery = [
+  {
+    title: "Fade Arquitectónico",
+    tag: "Skin fade / textura superior",
+    description: "Degradado limpio con volumen arriba para perfiles modernos y presencia más afilada."
+  },
+  {
+    title: "Barba de Precisión",
+    tag: "Navaja / perfilado / toalla caliente",
+    description: "Diseñada para reforzar mandíbula, limpiar contornos y proyectar una imagen más seria."
+  },
+  {
+    title: "Crop Editorial",
+    tag: "Corte de tendencia",
+    description: "Una propuesta con textura y caída controlada, ideal para clientes jóvenes y creativos."
+  }
+];
+
+const reviews = [
+  {
+    name: "Mateo R.",
+    text: "El fade quedó exacto y la barba mucho más limpia. Volví a la semana a reservar el plan mensual."
+  },
+  {
+    name: "Santiago V.",
+    text: "Buen ambiente, cero afán y un corte que sí duró viéndose bien varios días."
+  },
+  {
+    name: "Andrés C.",
+    text: "Reservé por WhatsApp, llegué a tiempo y salí listo para una reunión. Así debería ser siempre."
+  }
+];
+
+const reviewLoop = [...reviews, ...reviews];
+---
+
+<BaseLayout
+  title="Navaja 9 Barbería | Cortes premium, barba y membresías"
+  description="Barbería premium con cortes de autor, ritual de barba, membresías y una experiencia diseñada para que siempre salgas impecable."
+  canonical="https://navaja9barberia.com/"
+>
+  <main class="mx-auto w-[min(1180px,calc(100%-1.5rem))] pb-16 pt-5 sm:w-[min(1180px,calc(100%-2rem))] sm:pt-8">
+    <section class="grid min-h-[92vh] items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+      <div class="max-w-3xl">
+        <p class="mb-4 text-[0.72rem] font-extrabold tracking-[0.28em] text-cyan [text-wrap:balance]">
+          BARBERÍA DE CULTO / IMAGEN MASCULINA / RESERVA INTELIGENTE
+        </p>
+        <h1 class="font-display text-5xl leading-[0.88] font-bold uppercase tracking-[-0.05em] text-sand [text-wrap:balance] sm:text-6xl lg:text-[5.6rem]">
+          Corte, barba y estilo sin complicaciones.
+        </h1>
+        <p class="mt-5 max-w-lg text-base leading-7 text-mist sm:text-[1.05rem]">
+          Reserva fácil, buen ambiente y resultados que sí se notan.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="rounded-full border border-line bg-white/5 px-4 py-2 text-sm font-bold tracking-[0.02em] text-sand">
+            Agenda desde móvil
+          </span>
+          <span class="rounded-full border border-line bg-white/5 px-4 py-2 text-sm font-bold tracking-[0.02em] text-sand">
+            Membresías mensuales
+          </span>
+          <span class="rounded-full border border-line bg-white/5 px-4 py-2 text-sm font-bold tracking-[0.02em] text-sand">
+            Experiencia premium
+          </span>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            class="inline-flex min-h-14 items-center justify-center rounded-full bg-gradient-to-r from-gold to-[#ffd08d] px-6 text-sm font-extrabold text-ink shadow-[0_20px_50px_rgba(242,166,90,0.28)] transition hover:-translate-y-0.5"
+            href="#servicios"
+          >
+            Ver servicios
+          </a>
+          <a
+            class="inline-flex min-h-14 items-center justify-center rounded-full border border-line bg-white/4 px-6 text-sm font-bold text-sand transition hover:-translate-y-0.5"
+            href="#modelo"
+          >
+            Ver proceso
+          </a>
+        </div>
+
+        <ul class="mt-8 grid gap-2.5">
+          <li class="relative pl-5 text-mist before:absolute before:left-0 before:top-2.5 before:h-2 before:w-2 before:rounded-full before:bg-cyan">
+            Cortes adaptados a tu rostro.
+          </li>
+          <li class="relative pl-5 text-mist before:absolute before:left-0 before:top-2.5 before:h-2 before:w-2 before:rounded-full before:bg-gold">
+            Ritual de barba con navaja.
+          </li>
+        </ul>
+      </div>
+
+      <div class="relative flex min-h-[560px] items-center justify-center lg:min-h-[640px]">
+        <div class="absolute inset-[10%_4%_8%_8%] -z-10 rounded-[2.5rem] border border-white/10 bg-[linear-gradient(rgba(124,224,214,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(242,166,90,0.045)_1px,transparent_1px)] bg-[size:42px_42px] [mask-image:radial-gradient(circle_at_center,black_45%,transparent_100%)]"></div>
+
+        <div class="relative w-full max-w-[450px] overflow-hidden rounded-[2rem] border border-line bg-[linear-gradient(180deg,rgba(245,239,230,0.12),rgba(245,239,230,0.04))] p-8 shadow-[0_34px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+          <div class="absolute -bottom-18 -right-10 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(242,166,90,0.42),transparent_72%)]"></div>
+          <span class="relative text-[0.72rem] font-extrabold tracking-[0.22em] text-cyan">SESIÓN DESTACADA</span>
+          <h2 class="relative mt-3 font-display text-4xl leading-none font-bold uppercase tracking-[-0.04em] text-sand [text-wrap:balance] sm:text-5xl">
+            Imagen Completa
+          </h2>
+          <p class="relative mt-4 max-w-sm text-base leading-7 text-mist">
+            Corte de precisión + ritual de barba + acabado para cámara y calle.
+          </p>
+          <div class="relative mt-6 flex justify-between text-sm font-extrabold text-sand">
+            <span>70 min</span>
+            <span>$82.000</span>
+          </div>
+        </div>
+
+        <div class="absolute bottom-4 right-0 max-w-[260px] rounded-[1.6rem] border border-line bg-[linear-gradient(180deg,rgba(245,239,230,0.12),rgba(245,239,230,0.04))] p-4 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl max-sm:static max-sm:mt-4 max-sm:max-w-none">
+          <span class="text-[0.72rem] font-extrabold tracking-[0.22em] text-gold">RESERVAS</span>
+          <strong class="mt-2 block text-xl font-extrabold text-sand">Hoy quedan 6 slots</strong>
+          <p class="mt-2 text-sm leading-6 text-mist">11:10, 12:30, 14:00, 16:40, 18:20, 19:10</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-20 grid gap-5 lg:grid-cols-3">
+      {stats.map((stat) => (
+        <article class="rounded-[1.75rem] border border-line bg-white/6 p-6 backdrop-blur-xl">
+          <strong class="block font-display text-4xl font-bold tracking-[-0.04em] text-sand sm:text-5xl">
+            {stat.value}
+          </strong>
+          <span class="mt-2 block text-mist">{stat.label}</span>
+        </article>
+      ))}
+    </section>
+
+    <section class="mt-20">
+      <div class="mb-7 max-w-4xl">
+        <p class="mb-4 text-[0.72rem] font-extrabold tracking-[0.28em] text-gold">PORTAFOLIO DE CORTES</p>
+        <h2 class="font-display text-4xl leading-[0.92] font-bold uppercase tracking-[-0.045em] text-sand [text-wrap:balance] sm:text-5xl lg:text-[3.6rem]">
+          Algunos estilos que más nos piden en silla.
+        </h2>
+      </div>
+
+      <div class="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {gallery.map((item, index) => (
+          <article class="min-w-[86%] snap-center overflow-hidden rounded-[1.9rem] border border-line bg-white/6 backdrop-blur-xl sm:min-w-[420px] lg:min-w-[360px]">
+            <div
+              class={`min-h-[280px] border-b border-line ${
+                index === 0
+                  ? "bg-[radial-gradient(circle_at_top,rgba(124,224,214,0.22),transparent_35%),linear-gradient(135deg,#10202b_0%,#193447_55%,#0b141d_100%)]"
+                  : index === 1
+                    ? "bg-[radial-gradient(circle_at_top_right,rgba(242,166,90,0.26),transparent_32%),linear-gradient(135deg,#241b14_0%,#4a2f1e_55%,#14181e_100%)]"
+                    : "bg-[radial-gradient(circle_at_top_left,rgba(124,224,214,0.18),transparent_30%),linear-gradient(135deg,#171b22_0%,#283342_55%,#11161c_100%)]"
+              }`}
+            >
+              <div class="flex h-full items-end p-6">
+                <span class="rounded-full border border-white/15 bg-black/20 px-3 py-1 text-xs font-extrabold tracking-[0.16em] text-sand">
+                  FOTO DEMO
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[0.72rem] font-extrabold tracking-[0.24em] text-cyan">{item.tag}</p>
+              <h3 class="mt-3 font-display text-2xl font-bold uppercase tracking-[-0.03em] text-sand">
+                {item.title}
+              </h3>
+              <p class="mt-3 text-base leading-7 text-mist">{item.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-4 flex gap-3 text-xs font-extrabold tracking-[0.18em] text-mist">
+        <span>DESLIZA</span>
+        <span class="text-gold">→</span>
+        <span>PARA VER MÁS CORTES</span>
+      </div>
+    </section>
+
+    <section class="mt-20">
+      <div class="mb-7 max-w-4xl">
+        <p class="mb-4 text-[0.72rem] font-extrabold tracking-[0.28em] text-cyan">RESEÑAS</p>
+        <h2 class="font-display text-4xl leading-[0.92] font-bold uppercase tracking-[-0.045em] text-sand [text-wrap:balance] sm:text-5xl lg:text-[3.6rem]">
+          Lo que dicen quienes ya pasaron por la silla.
+        </h2>
+      </div>
+
+      <div class="overflow-hidden" aria-label="Reseñas de clientes">
+        <div class="reviews-marquee flex w-max gap-5 pb-3">
+          {reviewLoop.map((review, index) => (
+            <article class="w-[88vw] rounded-[1.75rem] border border-line bg-white/6 p-6 backdrop-blur-xl sm:w-[420px] lg:w-[360px]">
+              <span class={`text-[0.72rem] font-extrabold tracking-[0.24em] ${index % 3 === 1 ? "text-gold" : "text-cyan"}`}>
+                RESEÑA
+              </span>
+              <p class="mt-4 text-lg leading-7 text-sand">{review.text}</p>
+              <strong class="mt-6 block text-sm font-extrabold tracking-[0.14em] text-mist">{review.name}</strong>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-20" id="servicios">
+      <div class="mb-7 max-w-4xl">
+        <p class="mb-4 text-[0.72rem] font-extrabold tracking-[0.28em] text-gold">SERVICIOS PRINCIPALES</p>
+        <h2 class="font-display text-4xl leading-[0.92] font-bold uppercase tracking-[-0.045em] text-sand [text-wrap:balance] sm:text-5xl lg:text-[3.6rem]">
+          Servicios pensados para cuidar tu imagen con técnica, detalle y estilo.
+        </h2>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        {services.map((service) => (
+          <article class="flex min-h-[320px] flex-col rounded-[1.75rem] border border-line bg-[linear-gradient(180deg,rgba(245,239,230,0.1),rgba(245,239,230,0.04))] p-6 backdrop-blur-xl">
+            <div class="flex justify-between text-sm font-extrabold text-cyan">
+              <span>{service.duration}</span>
+              <span>{service.price}</span>
+            </div>
+            <h3 class="mt-4 font-display text-2xl font-bold uppercase tracking-[-0.03em] text-sand [text-wrap:balance]">
+              {service.name}
+            </h3>
+            <p class="mt-3 text-base leading-7 text-mist">{service.description}</p>
+            <a class="mt-auto pt-6 text-sm font-extrabold text-gold" href="#contacto">Agendar este servicio</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-20 grid items-start gap-5 pb-12 lg:grid-cols-[1fr_0.95fr]" id="contacto">
+      <div>
+        <p class="mb-4 text-[0.72rem] font-extrabold tracking-[0.28em] text-cyan">RESERVAS</p>
+        <h2 class="font-display text-4xl leading-[0.92] font-bold uppercase tracking-[-0.045em] text-sand [text-wrap:balance] sm:text-5xl lg:text-[3.6rem]">
+          Reserva tu próxima cita y déjanos construir un estilo a tu medida.
+        </h2>
+      </div>
+
+      <div class="rounded-[1.75rem] border border-line bg-white/6 p-6 backdrop-blur-xl">
+        <p class="text-base leading-7 text-mist">Reserva si buscas:</p>
+        <ul class="mt-4 grid gap-2.5">
+          <li class="relative pl-5 text-mist before:absolute before:left-0 before:top-2.5 before:h-2 before:w-2 before:rounded-full before:bg-gold">
+            un corte que se adapte a ti,
+          </li>
+          <li class="relative pl-5 text-mist before:absolute before:left-0 before:top-2.5 before:h-2 before:w-2 before:rounded-full before:bg-cyan">
+            una barba perfilada y limpia.
+          </li>
+        </ul>
+        <a
+          class="mt-7 inline-flex min-h-14 items-center justify-center rounded-full bg-gradient-to-r from-gold to-[#ffd08d] px-6 text-sm font-extrabold text-ink shadow-[0_20px_50px_rgba(242,166,90,0.28)] transition hover:-translate-y-0.5"
+          href="https://wa.me/573000000000"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Reservar por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .reviews-marquee {
+    animation: reviews-marquee 28s linear infinite;
+    will-change: transform;
+  }
+
+  .reviews-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes reviews-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-50% - 0.625rem));
+    }
+  }
+</style>
